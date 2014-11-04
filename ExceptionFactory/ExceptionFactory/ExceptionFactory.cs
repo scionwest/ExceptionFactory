@@ -60,7 +60,7 @@ namespace Sullinger.ExceptionFactory
         /// <param name="data">The data.</param>
         public static ExceptionFactoryResult ThrowExceptionIf<TException>(bool condition, Func<TException> exception, params KeyValuePair<string, string>[] data) where TException : Exception, new()
         {
-            if (condition)
+            if (!condition)
             {
                 return new ExceptionFactoryResult();
             }

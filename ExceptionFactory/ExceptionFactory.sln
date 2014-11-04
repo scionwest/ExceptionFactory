@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionFactory", "ExceptionFactory\ExceptionFactory.csproj", "{BD1D5D91-2143-4FC1-BD75-1E64F0145EDF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionFactoryTests", "ExceptionFactoryTests\ExceptionFactoryTests.csproj", "{1E0818CC-91B9-4318-81E5-6731D394A5AC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BD1D5D91-2143-4FC1-BD75-1E64F0145EDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD1D5D91-2143-4FC1-BD75-1E64F0145EDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD1D5D91-2143-4FC1-BD75-1E64F0145EDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E0818CC-91B9-4318-81E5-6731D394A5AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E0818CC-91B9-4318-81E5-6731D394A5AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E0818CC-91B9-4318-81E5-6731D394A5AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E0818CC-91B9-4318-81E5-6731D394A5AC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
