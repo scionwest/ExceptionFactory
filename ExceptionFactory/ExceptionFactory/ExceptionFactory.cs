@@ -81,12 +81,12 @@ namespace Sullinger.ExceptionFactory
         /// <param name="exception">The exception.</param>
         /// <param name="character">The character.</param>
         /// <param name="data">The data.</param>
-    public static void AddExceptionData(Exception exception, params KeyValuePair<string, string>[] data)
-    {
-        foreach (var exceptionData in data)
+        public static void AddExceptionData(Exception exception, params KeyValuePair<string, string>[] data)
         {
-            exception.Data.Add(exceptionData.Key, exceptionData.Value);
+            foreach (var exceptionData in data)
+            {
+                exception.Data.Add(exceptionData.Key, exceptionData.Value);
+            }
         }
-    }
     }
 }
