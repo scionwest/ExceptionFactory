@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Sullinger.ExceptionFactory
+namespace ExceptionFactory
 {
     /// <summary>
     /// Provides helper methods for quickly throwing exceptions based on conditions.
@@ -16,9 +16,9 @@ namespace Sullinger.ExceptionFactory
         /// <param name="message">The message.</param>
         /// <param name="character">The character.</param>
         /// <param name="data">The data.</param>
-        public static ExceptionFactoryResult ThrowExceptionIf<TException>(Func<bool> predicate, string message = null, params KeyValuePair<string, string>[] data) where TException : Exception, new()
+        public static ExceptionFactoryResult<TException> ThrowIf<TException>(Func<bool> predicate, string message = null, params KeyValuePair<string, string>[] data) where TException : Exception, new()
         {
-            return ThrowExceptionIf<TException>(predicate(), message, data);
+            return ThrowIf<TException>(predicate(), message, data);
         }
 
         /// <summary>
@@ -26,12 +26,12 @@ namespace Sullinger.ExceptionFactory
         /// </summary>
         /// <typeparam name="TException">The type of the exception.</typeparam>
         /// <param name="predicate">The predicate.</param>
-        /// <param name="exception">The exception.</param>
+        /// <param name="exceptionFactory">The exception.</param>
         /// <param name="character">The character.</param>
         /// <param name="data">The data.</param>
-        public static ExceptionFactoryResult ThrowExceptionIf<TException>(Func<bool> predicate, Func<TException> exception, params KeyValuePair<string, string>[] data) where TException : Exception, new()
+        public static ExceptionFactoryResult<TException> ThrowIf<TException>(Func<bool> predicate, Func<TException> exceptionFactory, params KeyValuePair<string, string>[] data) where TException : Exception, new()
         {
-            return ThrowExceptionIf<TException>(predicate(), exception, data);
+            return ThrowIf<TException>(predicate(), exceptionFactory, data);
         }
 
         /// <summary>
@@ -42,9 +42,9 @@ namespace Sullinger.ExceptionFactory
         /// <param name="message">The message.</param>
         /// <param name="character">The character.</param>
         /// <param name="data">The data.</param>
-        public static ExceptionFactoryResult ThrowExceptionIf<TException>(bool condition, string message = null, params KeyValuePair<string, string>[] data) where TException : Exception, new()
+        public static ExceptionFactoryResult<TException> ThrowIf<TException>(bool condition, string message = null, params KeyValuePair<string, string>[] data) where TException : Exception, new()
         {
-            return ThrowExceptionIf<TException>(
+            return ThrowIf<TException>(
                 condition,
                 () => (TException)Activator.CreateInstance(typeof(TException), message),
                 data);
@@ -55,19 +55,31 @@ namespace Sullinger.ExceptionFactory
         /// </summary>
         /// <typeparam name="TException">The type of the exception.</typeparam>
         /// <param name="condition">if set to <c>true</c> [condition].</param>
-        /// <param name="exception">The exception.</param>
+        /// <param name="exceptionFactory">The exception.</param>
         /// <param name="character">The character.</param>
         /// <param name="data">The data.</param>
-        public static ExceptionFactoryResult ThrowExceptionIf<TException>(bool condition, Func<TException> exception, params KeyValuePair<string, string>[] data) where TException : Exception, new()
+        public static ExceptionFactoryResult<TException> ThrowIf<TException>(bool condition, Func<TException> exceptionFactory, params KeyValuePair<string, string>[] data) where TException : Exception, new()
         {
             if (!condition)
             {
-                return new ExceptionFactoryResult();
+                return new ExceptionFactoryResult<TException>();
             }
 
-            TException exceptionToThrow = exception();
+            if (exceptionFactory == null)
+            {
+                throw new NullReferenceException("No exception was specified for the condition given.");
+            }
+
+            TException exceptionToThrow = exceptionFactory();
+            if (exceptionFactory == null)
+            {
+                throw new NullReferenceException("An exception was not generated through the given exception factory");
+            }
+
+            // Add any additional content that the caller requires to exist in the Exception data.
             AddExceptionData(exceptionToThrow, data);
 
+            // Add a time-stamp for when the exception was thrown.
             AddExceptionData(
                 exceptionToThrow,
                 new KeyValuePair<string, string>("Date", DateTime.Now.ToString()));

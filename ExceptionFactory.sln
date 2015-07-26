@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionFactory", "ExceptionFactory\ExceptionFactory.csproj", "{BD1D5D91-2143-4FC1-BD75-1E64F0145EDF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{F841FF4C-21F6-41D3-8CA2-37E5C4FC9DC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionFactoryTests", "ExceptionFactoryTests\ExceptionFactoryTests.csproj", "{1E0818CC-91B9-4318-81E5-6731D394A5AC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionFactory", "Source\ExceptionFactory.csproj", "{BD1D5D91-2143-4FC1-BD75-1E64F0145EDF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{A8F8D4D7-8171-4513-AD1B-64CDC18E15AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionFactoryTests", "UnitTests\ExceptionFactoryTests.csproj", "{1E0818CC-91B9-4318-81E5-6731D394A5AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +28,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BD1D5D91-2143-4FC1-BD75-1E64F0145EDF} = {F841FF4C-21F6-41D3-8CA2-37E5C4FC9DC4}
+		{1E0818CC-91B9-4318-81E5-6731D394A5AC} = {A8F8D4D7-8171-4513-AD1B-64CDC18E15AD}
 	EndGlobalSection
 EndGlobal

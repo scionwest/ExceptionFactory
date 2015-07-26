@@ -6,8 +6,8 @@
     <ProjectGuid>{1E0818CC-91B9-4318-81E5-6731D394A5AC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExceptionFactoryTests</RootNamespace>
-    <AssemblyName>ExceptionFactoryTests</AssemblyName>
+    <RootNamespace>ExceptionFactory.UnitTests</RootNamespace>
+    <AssemblyName>ExceptionFactory.UnitTests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -50,15 +50,17 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="ExceptionFactoryTests.cs" />
+    <Compile Include="ExceptionFactory.Tests.cs" />
+    <Compile Include="ExceptionFactoryResult.Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ExceptionFactory\ExceptionFactory.csproj">
+    <ProjectReference Include="..\Source\ExceptionFactory.csproj">
       <Project>{bd1d5d91-2143-4fc1-bd75-1e64f0145edf}</Project>
       <Name>ExceptionFactory</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

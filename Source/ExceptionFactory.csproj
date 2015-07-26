@@ -8,8 +8,8 @@
     <ProjectGuid>{BD1D5D91-2143-4FC1-BD75-1E64F0145EDF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Sullinger.ExceptionFactory</RootNamespace>
-    <AssemblyName>Sullinger.ExceptionFactory</AssemblyName>
+    <RootNamespace>ExceptionFactory</RootNamespace>
+    <AssemblyName>ExceptionFactory</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
