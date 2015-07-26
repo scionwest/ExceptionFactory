@@ -1,0 +1,1 @@
+nuget pack ExceptionFactory.csproj -Prop Configuration=Release

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>https://github.com/scionwest/ExceptionFactory/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/scionwest/ExceptionFactory</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>This breaking release includes namespace and method name changes. ExceptionFactory now supports chainable conditions.</releaseNotes>
+    <copyright>Copyright Johnathon Sullinger 2015</copyright>
+    <tags>Exception Exceptions</tags>
+  </metadata>
+</package>
