@@ -1,7 +1,6 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace ExceptionFactory.UnitTests
+namespace System.UnitTests
 {
     /// <summary>
     /// Test that the ExceptionFactoryResult class works as expected.

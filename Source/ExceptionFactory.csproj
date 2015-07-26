@@ -8,7 +8,7 @@
     <ProjectGuid>{BD1D5D91-2143-4FC1-BD75-1E64F0145EDF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExceptionFactory</RootNamespace>
+    <RootNamespace>System</RootNamespace>
     <AssemblyName>ExceptionFactory</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>

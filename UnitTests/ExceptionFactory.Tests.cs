@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace ExceptionFactory.UnitTests
+namespace System.UnitTests
 {
     [TestClass]
     public class ExceptionFactoryTests

@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace ExceptionFactory
+namespace System
 {
     /// <summary>
     /// Provides helper methods for quickly throwing exceptions based on conditions.

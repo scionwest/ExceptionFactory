@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>ExceptionFactory</id>
+        <version>2.0.1.2</version>
+        <title>ExceptionFactory</title>
+        <authors>Johnathon Sullinger</authors>
+        <licenseUrl>https://github.com/scionwest/ExceptionFactory/blob/master/LICENSE</licenseUrl>
+        <projectUrl>http://github.com/scionwest/ExceptionFactory</projectUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <description>Provides a series of factory methods for creating exceptions in .NET using chainable conditions</description>
+        <summary>Provides a series of factory methods for creating exceptions in .NET</summary>
+        <releaseNotes>Fixed namespace conflicts.
+2.0 contains breaking changes due to namespace and method renames happening.</releaseNotes>
+        <copyright>Johnathon Sullinger 2015</copyright>
+        <language>en-US</language>
+        <tags>exception</tags>
+    </metadata>
+    <files>
+        <file src="bin\Release\ExceptionFactory.dll" target="lib\ExceptionFactory.dll" />
+    </files>
+</package>
